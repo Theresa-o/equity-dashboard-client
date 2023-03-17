@@ -17,7 +17,7 @@ const BarChart = () => {
 
   useEffect(() => {
     const fetchAccountinfo = async () => {
-      const res = await fetch("http://localhost:3000/");
+      const res = await fetch("https://equity-dashboard.onrender.com");
       const data = await res.json();
       setChart(data);
       try {
@@ -70,58 +70,3 @@ const BarChart = () => {
 };
 
 export default BarChart;
-
-// -----------------------------------------
-// import React from "react";
-// import {Chart as ChartJS, BarElement} from 'chart.js'
-// import { Line } from "react-chartjs-2";
-
-// function LineChart({ data }) {
-//   return (
-//     <div className="chart-container">
-//       <Line
-//         data={data}
-//         options={{
-//           plugins: {
-//             title: {
-//               display: true,
-//               text: "Account details",
-//             },
-//             legend: {
-//               display: false,
-//             },
-//           },
-//         }}
-//       />
-//     </div>
-//   );
-// }
-
-// export default LineChart;
-
-// --------------------------------------
-// import React from "react";
-// import { Line } from "react-chartjs-2";
-
-// function LineChart({ data }) {
-//   return (
-//     <div className="chart-container">
-//       <Line
-//         data={data}
-//         options={{
-//           plugins: {
-//             title: {
-//               display: true,
-//               text: "Account details",
-//             },
-//             legend: {
-//               display: false,
-//             },
-//           },
-//         }}
-//       />
-//     </div>
-//   );
-// }
-
-// export default LineChart;
